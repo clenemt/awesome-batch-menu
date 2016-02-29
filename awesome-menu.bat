@@ -12,6 +12,8 @@ rem Will iterate over passed arguments
     if not [%1]==[] (
         set found=
 
+        rem Some common opts example below
+
         if "%~1"=="-u" set res=1
         if "%~1"=="--user" set res=1
         if defined res (
@@ -38,7 +40,10 @@ rem Will iterate over passed arguments
             goto :help
         )
 
-        rem The mandatory arg
+        rem Put your other options below
+        rem ...
+
+        rem The mandatory opt (remove if you don't have one)
         if not defined found (
             set file=%1
         )
@@ -48,7 +53,9 @@ rem Will iterate over passed arguments
     )
 
 :processopts
-rem Logic goes here
+rem Your opt handling logic goes below
+
+    rem Sample verbose handling
     if defined verbose (
         echo user = %user%
         echo option = %opion%
@@ -56,6 +63,7 @@ rem Logic goes here
         echo file = %file%
     )
 
+    rem Sample file handling
     if not defined file (
         echo The ^<file^> argument is mandatory. See below.
         goto :help
