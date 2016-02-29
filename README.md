@@ -1,4 +1,6 @@
 # awesome-batch-menu
-A batch menu template. Nice and simple.
+This is a simple template for batch programs. It contains logic for arguments parsing and a nice default menu command.
 
 ![](screenshot.png)
+
+For more advance `opts` parsing: http://stackoverflow.com/a/8162578
